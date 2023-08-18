@@ -18,6 +18,9 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        'Tenancy\Hooks\Database\Events\Drivers\Configuring' => [
+            'App\Listeners\ConfigureTenantDatabase',
+        ],
     ];
 
     /**
